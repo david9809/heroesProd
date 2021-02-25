@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div *ngFor="let i of heroes">
+            <div class="card" style="width: 18rem;" *ngIf="i">
+                <div class="col">
+                    <img [src]="i.img" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{i.nombre}}</h5>
+                        <p class="card-text">{{i.bio}}</p>
+                        <a href="#" class="btn btn-primary">{{i.nombre}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

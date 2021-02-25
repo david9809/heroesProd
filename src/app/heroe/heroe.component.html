@@ -1,0 +1,53 @@
+<div class="container">
+    <app-header titulo="Nuevo Heroe"></app-header>
+    <form #heroe_form="ngForm" (submit)="guardar(heroe_form)">
+
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img [src]="heroe.img" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <input class="form-control" type="text" [(ngModel)]="heroe.nombre" name="nombre" required>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="form-row">
+            <div class="col">
+                <label for="">Nombre</label>
+                <input class="form-control" type="text" [(ngModel)]="heroe.nombre" name="nombre" required>
+            </div>
+            <div class="col">
+                <label for="">Fecha de aparicion</label>
+                <input class="form-control" type="date" [(ngModel)]="heroe.aparicion" name="aparicion" required>
+            </div>
+            <div class="col">
+                <label for="">Casa</label>
+                <select class="form-control" [(ngModel)]="heroe.casa" name="casa" required>
+                    <option value="DC">
+                        DC
+                    </option>
+                    <option value="Marvel">
+                        Marvel
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <img [src]="heroe.img">
+                <input class="form-control" type="text" [(ngModel)]="heroe.img" name="img" required>
+            </div>
+            <div class="col">
+                <label for="">Biografia</label>
+                <textarea class="form-control" type="text" [(ngModel)]="heroe.bio" name="bio" required></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">Guardar</button>
+    </form>
+</div>
